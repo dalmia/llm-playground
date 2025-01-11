@@ -18,7 +18,9 @@ if not validate_openai_api_key(openai_api_key):
 mode = st.sidebar.selectbox("Select a mode", modes)
 
 def show_chat_mode():
-    system_prompt = st.sidebar.text_area("System prompt", value="You are a helpful assistant who is having a conversation with a user. You are given a conversation history and a user message. You are to respond to the user message based on the conversation history. You are to respond in a friendly and helpful manner.", height=400)
+    system_prompt = st.sidebar.text_area("System prompt", value="You are a helpful assistant who is having a conversation with a user. You are given a conversation history and a user message. You are to respond to the user message based on the conversation history. You are to respond in a friendly and helpful manner.", height=300)
+
+    temperature = st.sidebar.slider("Temperature", min_value=0.0, max_value=5.0, value=0.5, step=0.1)
 
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = [
@@ -93,7 +95,7 @@ def show_chat_mode():
         st.session_state.ai_chat_history.add_user_message(user_message_for_ai)
 
         with container:
-            ai_response = chat(st.session_state.ai_chat_history, system_prompt, openai_api_key)
+            ai_response = chat(st.session_state.ai_chat_history, system_prompt, openai_api_key, temperature=temperature)
         
         return ai_response
 

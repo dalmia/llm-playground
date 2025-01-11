@@ -1,4 +1,4 @@
-from llm import MessageHistory, ai_chat_has_audio_input
+from lib.llm import MessageHistory, ai_chat_has_audio_input
 # import instructor
 from openai import OpenAI
 import streamlit as st
