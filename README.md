@@ -20,5 +20,5 @@ This is a simple `streamlit` app that shows how to build different use cases usi
   ```
 - Run the app
   ```
-  streamlit run src/home.py
+  streamlit run streamlit_app.py
   ```
