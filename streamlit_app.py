@@ -1,16 +1,19 @@
-import sys
-
-if './src' not in sys.path:
-    sys.path.append('./src')
-
 import streamlit as st
 from PIL import Image
-from llm import MessageHistory, display_waiting_indicator, prepare_audio_input_for_llm, prepare_image_input_for_llm, ai_chat_has_audio_input, ai_chat_has_image_input
-from prompts import chat
+from src.llm import MessageHistory, display_waiting_indicator, prepare_audio_input_for_llm, prepare_image_input_for_llm, ai_chat_has_audio_input, ai_chat_has_image_input, validate_openai_api_key
+from src.prompts import chat
 
 modes = ["Chat"]
 
 openai_api_key = st.sidebar.text_input("OpenAI API key", type="password")
+
+if not openai_api_key:
+    st.error("Please enter your OpenAI API key")
+    st.stop()
+
+if not validate_openai_api_key(openai_api_key):
+    st.error("Please enter a valid OpenAI API key")
+    st.stop()
 
 mode = st.sidebar.selectbox("Select a mode", modes)
 

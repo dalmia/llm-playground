@@ -2,6 +2,7 @@ import streamlit as st
 import base64
 from PIL import Image
 from io import BytesIO
+from openai import OpenAI
 
 class MessageHistory:
     def __init__(self):
@@ -79,3 +80,14 @@ def ai_chat_has_audio_input(messages: list[dict]):
 
 def ai_chat_has_image_input(messages: list[dict]):
     return any(message["content"][0]["type"] == "image_url" for message in messages if isinstance(message["content"], list))
+
+@st.cache_data(show_spinner="Validating OpenAI API key...")
+def validate_openai_api_key(openai_api_key: str):
+    client = OpenAI(
+        api_key=openai_api_key
+    )
+    try:
+        client.models.list()
+        return True
+    except Exception:
+        return False
