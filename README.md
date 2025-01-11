@@ -24,7 +24,7 @@ TODO (coming soon):
 
 ## Installation
 - Clone the repository
-- Create a virtual environment
+- Create a virtual environment (Python 3.10+)
   ```
   python -m venv venv
   ```
