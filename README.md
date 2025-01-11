@@ -7,20 +7,20 @@ This is a simple `streamlit` app that shows how to build different use cases usi
 **Features supported:**
 - Chat using text, image and audio inputs while maintaining chat history
 - Extracting structured outputs from text/audio/image inputs
-- Streaming responses
+- Streaming responses (both text and JSON)
 - Changing the system prompt and temperature from the UI
 
 TODO (coming soon):
-- Chain-Of-Thought reasoning
-- RAG over single and multiple documents
-- Tool calling/agentic workflows
-- Realtime API (audio-to-audio, advanced voice mode)
-- Summarization
-- Reasoning over videos and structured outputs from videos
-- Text-to-video generation
-- Speech-to-text and text-to-speech
-- Transcription and translation
-- Text-to-image generation, Image-to-text generation
+- [ ] Chain-Of-Thought reasoning
+- [ ] RAG over single and multiple documents
+- [ ] Tool calling/agentic workflows
+- [ ] Realtime API (audio-to-audio, advanced voice mode)
+- [ ] Summarization
+- [ ] Reasoning over videos and structured outputs from videos
+- [ ] Text-to-video generation
+- [ ] Speech-to-text and text-to-speech
+- [ ] Transcription and translation
+- [ ] Text-to-image generation, Image-to-text generation
 
 ## Installation
 - Clone the repository
