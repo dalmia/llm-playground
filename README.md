@@ -2,7 +2,7 @@
 
 This is a simple `streamlit` app that shows how to build different use cases using LLMs. It currently supports LLMs offered by OpenAI.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://llm101.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://the-llm-playground.streamlit.app/)
 
 **Features supported:**
 - Chat using text, image and audio inputs while maintaining chat history
