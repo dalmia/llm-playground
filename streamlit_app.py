@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
-from src.llm import MessageHistory, display_waiting_indicator, prepare_audio_input_for_llm, prepare_image_input_for_llm, ai_chat_has_audio_input, ai_chat_has_image_input, validate_openai_api_key
-from src.prompts import chat
+from lib.llm import MessageHistory, display_waiting_indicator, prepare_audio_input_for_llm, prepare_image_input_for_llm, ai_chat_has_audio_input, ai_chat_has_image_input, validate_openai_api_key
+from lib.modes import chat
 
 modes = ["Chat"]
 
